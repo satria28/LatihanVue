@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data Binding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+​    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+    <div class="container" style="padding-top: 20px;">
+        <div class="row" id="sk">
+            <div class="col-md-6">
+                <div class="panel panel-danger">
+                    <h3 class="panel-title"> Daftar Siswa</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>Nama</label >
+                            <input type="text" class="form-control" placeholder="Nama" v-model="nama">        
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas</label>
+                        <input type="text" class="form-control" placeholder="Kelas" v-model="kelas">
+                    </div>
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <input type="text" class="form-control" placeholder="Keterangan" v-model="keterangan">
+                    </div>
+                    <hr>
+
+                    <div class="siswa">
+                        <h3><i class="fa fa-bullhorn"></i>{{nama}}</h3>
+                        <p><i class="fa fa-bullhorn"></i>{{kelas}}</p>
+                        <p>{{keterangan}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.6/dist/vue.js"></script>
+    <script type="text/javascript">
+        new Vue ({
+            el: '#sk',
+            data: {
+                nama: '',
+                kelas: '',
+                keterangan:''
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan Vue Js</title>
+</head>
+<body>
+ <div id= "sk">
+    <input type="text" v-model="title">
+    <p><b>Materi : {{title}}</b></p>
+</div>
+    
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.js"></script>
+    <script type="text/javascript">
+         new Vue({
+            el: '#sk',
+            data: {
+                title : 'VueJS  Data Binding'
+            }
+        });
+    </script>
+    
+</html>
